@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_performances">
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.ubi_interfaces.ui.profile.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_performances"
+        android:name="com.example.ubi_interfaces.ui.performances.PerformancesActivity"
+        android:label="Performances"
+        tools:layout="@layout/fragment_performances" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.ubi_interfaces.ui.settings_main.SettingsMain"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings_main" />
+</navigation>

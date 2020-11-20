@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/performacePicture"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hora"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="12h00"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toEndOf="@+id/performacePicture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/reqPass"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/localization"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        android:drawableLeft="@mipmap/privacy"-->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:contentDescription="Requires Password"
+
+            android:src="@mipmap/privacy" />
+
+        <TextView
+            android:id="@+id/reqPassText"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:text="Yes" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/totalParticipantsWrap"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/reqPass"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:contentDescription="Requires Password"
+
+            android:src="@mipmap/user" />
+
+        <TextView
+            android:id="@+id/totalParticipants"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="10"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/localization"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:maxWidth="100dp"
+        android:text="localization"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/participate"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toEndOf="@+id/performacePicture"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:maxWidth="180dp" />
+
+    <Button
+        android:id="@+id/participate"
+        android:layout_width="105dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="40dp"
+        android:onClick="insertParticipant"
+        android:text="Participate"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
